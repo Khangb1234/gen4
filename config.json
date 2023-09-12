@@ -1,20 +1,45 @@
 {
-    "language": "en",
-    "keyActive": "",
+    "language": "vi",
+    "keyname": "hahah",
     "DeveloperMode": false,
+    "botkey": "239393072",
     "autoCreateDB": true,
     "allowInbox": true,
-    "autoClean": false,
-    "commandDisabled": [],
+    "autoClean": true,
+    "DEV_MODE": false,
+    "UPTIME": 1702993,
+    "UPT": false,
+    "useprefix": false,
+    "DASHBOARD": true,
+    "upt_limit": false,
+    "at_clearcache": true,
+    "OWNER": [],
+    "DESIGN": {
+        "Theme": "dream"
+    },
+    "API": {
+        "main": "https://api-port.haimothaihai.repl.co/",
+        "anime2": "https://api-port.haimothaihai.repl.co/img/anime2"
+    },
+    "autorestart": true,
+    "autorestart_time": 25,
+    "adminOnly": false,
+    "NOTIFICATION": true,
+    "commandDisabled": [
+        "console.js",
+        "1a.js",
+        "runnoti.js",
+        "cap.js"
+    ],
     "eventDisabled": [],
-    "EMAIL": "",
-    "PASSWORD": "",
-    "OTPKEY": "",
-    "BOTNAME": "",
-    "PREFIX": "!",
+    "EMAIL": "thuday14112@gmail.com",
+    "PASSWORD": "thudev123456",
+    "OTPKEY": "24586431",
+    "BOTNAME": "[💖] ᴍᴇɢᴜᴍʏɴᴛ - x [🐳]",
+    "PREFIX": "/",
     "ADMINBOT": [
-        "USERID1",
-        "USERID2"
+        "100060845223319",
+        "100062327635551"
     ],
     "DATABASE": {
         "sqlite": {
@@ -28,6 +53,174 @@
         "pauseLog": true,
         "logLevel": "error",
         "selfListen": false,
-        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36"
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36"
+    },
+    "version": "1.2.14",
+    "daily": {
+        "cooldownTime": 300000,
+        "rewardCoin": 500
+    },
+    "help": {
+        "autoUnsend": true,
+        "delayUnsend": 60
+    },
+    "radio": {
+        "YOUTUBE_API": "AIzaSyA81xmaIo6uozgapDe7_yDjFfnOwkfx_XA"
+    },
+    "tenngaunhien": {
+        "APIKEY": "mi451266190"
+    },
+    "watch": {
+        "YOUTUBE_API": "AIzaSyB6pTkV2PM7yLVayhnjDSIM0cE_MbEtuvo"
+    },
+    "weather": {
+        "OPEN_WEATHER": "196ac91264f90df6590b46309556229f"
+    },
+    "work": {
+        "cooldownTime": 10000
+    },
+    "ảnh": {
+        "cooldownTime": 1200000
+    },
+    "adminUpdate": {
+        "autoUnsend": true,
+        "sendNoti": true,
+        "timeToUnsend": 10
+    },
+    "log": {
+        "enable": true
+    },
+    "cave": {
+        "cooldownTime": 1000000
+    },
+    "cavevip": {
+        "cooldownTime": 1200000
+    },
+    "diemdanh": {
+        "cooldownTime": 86400000,
+        "rewardCoin": 5000,
+        "rewardExp": 1000,
+        "rewardUsages": 100
+    },
+    "duaxe": {
+        "key": "cuongngu"
+    },
+    "lixi": {
+        "cooldownTime": 1200000
+    },
+    "loto": {
+        "maxPlayers": 10,
+        "getDelay": 8
+    },
+    "math": {
+        "WOLFRAM": "T8J8YV-H265UQ762K"
+    },
+    "rankup": {
+        "autoUnsend": true,
+        "unsendMessageAfter": 20
+    },
+    "shortlink": {
+        "bitlyAPI": ""
+    },
+    "shortvd": {
+        "APIKEY": "XSemUp2Zv5"
+    },
+    "sing": {
+        "YOUTUBE_API": "AIzaSyBKgc6dhJ7kn4cSxqVOckkGFL0h4cryxKQ"
+    },
+    "subnau": {
+        "APIKEY": ""
+    },
+    "video2": {
+        "YOUTUBE_API": "AIzaSyC1HQ3HHQSzgXdvlm5vZ2gWX0Ubk8GYD-c"
+    },
+    "lamviec": {
+        "cooldownTime": 1200
+    },
+    "cavev2": {
+        "cooldownTime": 100000000
+    },
+    "hunter": {
+        "userToken": "D7tTFhgD",
+        "adminToken": "ZkSy3UsT"
+    },
+    "rname": {
+        "APIKEY": "mi451266190"
+    },
+    "sing1": {
+        "YOUTUBE_API": "AIzaSyDAiwFBGnV6wbOe3UPY8h61vRzxSgxRa_g",
+        "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
+    },
+    "sub": {
+        "APIKEY": ""
+    },
+    "tiktok": {
+        "API_KEY": "mzk_EE8BUGCYUB7AUF4HCYK"
+    },
+    "video": {
+        "YOUTUBE_API": "AIzaSyB6pTkV2PM7yLVayhnjDSIM0cE_MbEtuvo"
+    },
+    "helper": {
+        "autoUnsend": "",
+        "delayUnsend": 60
+    },
+    "dailyy": {
+        "cooldownTime": 86400000,
+        "rewardCoin": 5000,
+        "rewardExp": 1000,
+        "rewardUsages": 100
+    },
+    "menu2": {
+        "autoUnsend": {
+            "status": true,
+            "timeOut": 120
+        },
+        "sendAttachments": {
+            "status": false,
+            "random": false,
+            "url": "https://1.bp.blogspot.com/-dbi0Mj8dgG4/XnC1-STD8LI/AAAAAAAAY3U/ht2Fm6sCgXwSbdI6qck59HA8QVk4IdGzwCLcBGAsYHQ/s1600/Rung-nui-hung-vy-Diembaogi+%283%29.jpg"
+        }
+    },
+    "workv3": {
+        "cooldownTime": 1
+    },
+    "wtte": {
+        "cooldownTime": 1000
+    },
+    "gamelq": {
+        "cooldownTime": 60
+    },
+    "hamster": {
+        "cooldownTime": 60
+    },
+    "lq1": {
+        "fb_token": "6628568379%7Cc1e620fa708a1d5696fb991c1bde5662"
+    },
+    "menu": {
+        "autoUnsend": true,
+        "delayUnsend": 60
+    },
+    "minecraft": {
+        "HYPIXEL_API": "2aaba24d-7fb5-4003-8bfb-d8458a9499a1"
+    },
+    "subnautica": {
+        "APIKEY": ""
+    },
+    "sub1": {
+        "cooldownTime": 60000
+    },
+    "xedua": {
+        "key": "cuongngu"
+    },
+    "mn": {
+        "autoUnsend": {
+            "status": true,
+            "timeOut": 60
+        },
+        "sendAttachments": {
+            "status": true,
+            "random": true,
+            "url": "https://i.ibb.co/T4Zr0sy/z3692132602050-019d89d029ccca04d6316004ac015531.jpg"
+        }
     }
 }

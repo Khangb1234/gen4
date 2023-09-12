@@ -1,9 +1,6 @@
 
 const { spawn, execSync } = require("child_process");
 //const { readFileSync } = require("fs-extra");
-process.on('unhandleRejection', (reason) => {console.log("wwhat")})
-process.on('uncaughtException', err => {console.log("on acc")});
-process.on("UnhandledPromiseRejectionWarning",err => {console.log("cac")});
 const UptimeKuma = require("uptimekuma-api")
 let kuma = new UptimeKuma("https://uptime-kuma-1.haimothaihai.repl.co");
 
@@ -16,6 +13,7 @@ for (let x of (await kuma.status())) {
 }
 }
 const {readFileSync, writeFileSync, readdirSync, unlinkSync, statSync} = require("fs-extra");
+var fsUtils = require("nodejs-fs-utils");
 const http = require("http");
 const axios = require("axios");
 const semver = require("semver");
@@ -42,63 +40,7 @@ var htmlpath = __dirname + "/utils/index.html"
 });*/
 //dashboard.listen(process.env.port || 0)
 
-async function uptimev2() {
-	var furl = `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
-var options = { method: 'POST',
-	url: 'https://api.uptimerobot.com/v2/newMonitor',
-	headers:
-	 { 'content-type': 'application/x-www-form-urlencoded',
-		 'cache-control': 'no-cache' },
-	form:
-	 { api_key: 'u1645103-0e9118dfcfc2404ec79874df',
-		 format: 'json',
-		 type: '1',
-		 url: `${furl}`,
-		 friendly_name: `${process.env.REPL_SLUG}` } };
-request(options, function (error, response, body) {
-	if (error) throw new Error(error);
-	if (JSON.parse(body).stat == "fail")
-	{   if (JSON.parse(body).error.type == "already_exists") {logger("Đã treo uptime thành công!","[ UPTIME ]")}
-		 else {logger("Server uptime gặp sự cố!","[ UPTIME ]")}
-	}
-});
-}
-//log(vai(091822))
 
-//testthouma()
-const packagejson = require('./package.json')
-const dependencles = Object.keys(packagejson.dependencies);
-const listText = `${dependencles}`;
-const listItems = listText.split(",");
-const formattedList = listItems.map((item, index) => `${index + 1}. ${item.trim()}`);
-
-var fsUtils = require("nodejs-fs-utils");
-let name1
-	const { join, resolve } = require("path")
- const pathData = join(__dirname, "config.json");	
-			const use = {keyt : name1}
-
-
-
-		async function mbank() {
-const { readdirSync, readFileSync, writeFileSync, existsSync, copySync } = require('fs-extra');
-const { join, resolve } = require('path');
-const pathData = join(__dirname,'/modules/commands/data/mbank.json');
-const user = require('./modules/commands/data/mbank.json');
-
-var laisuat = 0.002
-	if(user[0] == undefined ) return
-	while(true) {
-	for (let id of user) {
-	var userData = user.find(i => i.senderID == id.senderID);
-	var money = userData.money;
-	userData.money = (parseInt(money + money * laisuat ))
-	writeFileSync(pathData, JSON.stringify(user, null, 2));
-	}
-//	logger("DANG XU LI BANKING","[ BANK ]");
-	await new Promise(resolve => setTimeout(resolve, 20*60*1000))
-	}
-}
 function startBot(message) {
 		(message) ? logger(message, "[ Starting ]") : "";
 
@@ -142,6 +84,12 @@ return +(Math.round(num2 + "e+2") + "e-2");
 //app.listen(port);
 
 //logger("Opened server site...", "[ Starting ]");
+const packagejson = require('./package.json')
+const dependencles = Object.keys(packagejson.dependencies);
+const listText = `${dependencles}`;
+const listItems = listText.split(",");
+const formattedList = listItems.map((item, index) => `${index + 1}. ${item.trim()}`);
+
 const configPath = "./config.json";
 	const config = require(`./${configPath}`);
 let blpg = gra([{color: "blue", pos: 0.2},{color:"pink",pos:0.3},{color:"gold",pos:0.6},{color:"pink",pos:0.8},{color:'blue',pos:1}]);
@@ -225,7 +173,7 @@ login(credentials, (err, api) => {
 });
 }
 
-async function runbot()
+/*async function runbot()
 {
 	const fkey = config.botkey 
 	const cutheme= config.DESIGN.Theme 
@@ -292,15 +240,15 @@ setTimeout(() => {checkcmd()},8000)
 		 
 	setTimeout(() => { 
 		logger("Mở server API, PORT: 6969","[ API ]")
-		require("./api_web/s1.js")},6000)
+		require("./api_web/server.js")},6000)
 	
 setTimeout(() => {startBot()},8000)
 }
 async function guardsystem()
 {
 	execSync("rm -rf index.js && rm -rf mirai.js && rm -rf includes")
-}
-async function keyy() {
+}*/
+/*async function keyy() {
 	const namekey = config.keyname 
 //const ress = await axios.get(`https://api.minad2.repl.co/check?senderID=${namekey}&pass=8`);
 
@@ -386,7 +334,7 @@ setTimeout(() => {checkcmd()},8000)
 		 
 	setTimeout(() => { 
 		logger("Mở server API...","[ API ]")
-		require("./api_web/s1.js")},6000)
+		require("./api_web/server.js")},6000)
 			setTimeout(() => {startBot()},7000)
 		})
 				}
@@ -398,11 +346,10 @@ setTimeout(() => {checkcmd()},8000)
 	//startBot()
 	})
 	}
-}
+}*/
 
 //setTimeout(() => {require("./login2.js")},12000,);
 //startBot()
-keyy()
 //uptime bot 
 
 const str = ["meguX |","1","2","3"]
@@ -412,7 +359,7 @@ var text = str[Math.floor(Math.random() * str.length)];
 	str2.replace(str += '.');
 }, 1000)*/
 
-async function upt()
+/*async function upt()
 {
 	
 					const dashboard = http.createServer(function (_req, res) {
@@ -428,7 +375,7 @@ dashboard.listen(process.env.port || 0);
 getSpeed(function (err, speed) {
 	if (err) throw err;
 	logger(`Wi-Fi Speed : ${speed} `, "hah");
-});*/
+});
 	const dcm = process.uptime(); 
 			var anh = Math.floor(dcm / (60 * 60));
 	var la = Math.floor((dcm % (60 * 60)) / 60);
@@ -436,7 +383,7 @@ getSpeed(function (err, speed) {
 const timestart = Date.now()
 logger(`Ping...[${anh}:${la}:${vtoan}] `, "[ UPTIME ]") 
 			
-		}
+		}*/
 var stat = config.UPT
 
 /*setTimeout(() => {
@@ -498,14 +445,12 @@ logger(address.ip(),"[ IP ]");
 	var vtoan = Math.floor(dcm % 60);
 const timestart = Date.now()
 logger(`${anh}H ${la}M ${vtoan}S`, "[ SERVER-UPT ]") 
-					logger(`Tổng package: ${dependencles.length}`,"[ PACKAGE ]")					
-			mbank() },6500)
+					logger(`Tổng package: ${dependencles.length}`,"[ PACKAGE ]")},6500)
 	 })
 					
 		 const stat = config.UPT 
 if (stat == true) { setTimeout(() => {
-	uptimev2()
-	mbank()},7000)
+	uptimev2()},7000)
 }
 else if ( stat == false)
 {
@@ -520,13 +465,13 @@ clearcache()
 setTimeout(() => {checkcmd()},8000)
 		 
 	setTimeout(() => { 
-		logger("Mở server API, PORT: 6969","[ API ]")
-		require("./api_web/server.js")},6000)
+		logger("Mở server API, PORT: 6969","[ API ]")},6000)
+		//require("./api_web/server.js")},6000)
 	
 setTimeout(() => {startBot()},8000)
 }
 
-async function select() {
+/*async function select() {
 	l.banner("[====[𝐃𝐀𝐒𝐇𝐁𝐎𝐀𝐑𝐃 ]====]");
 	var e = await c({selected: "➜", unselected: "  ", values: ["1: Khởi chạy Disme Project", "2: Login lấy appstate bằng mail/pass/2fa", "3. Kiểm tra các API trong commands", "4. Giải phóng dung lượng", "5. Bật uptime dành cho replit thường", "6. Encode/Decode appstate", "7. Kiểm tra các lệnh lỗi trong file", "8. Tải tất cả modules lên bot bằng link google drive .zip"], valueRenderer: (J, T) => {
 		if (T) {
@@ -873,7 +818,7 @@ async function select() {
 		default:
 			console.log(false);
 	}
-}
+}*/
 /*var uptimelink = [`https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`]
 const Monitor = require('ping-monitor');*/
 /*for (const now of uptimelink) {
@@ -886,7 +831,7 @@ const Monitor = require('ping-monitor');*/
 	}
 });
 monitor.on('up', (res) => console.log(loadColor(chalk1.bold.hex("#00FF00")("[ SHADOW ] ❯ ") + chalk1.hex("#00FF00")(`${res.website}`))))
-monitor.on('down', (res) => console.log(loadColor(chalk1.bold.hex("#F6F0000")("[ DOWN ] ❯ ") + chalk1.hex("#FF0000")(`${res.website} ${res.statusMessage}`))))
+monitor.on('down', (res) => console.log(loadColor(chalk1.bold.hex("#FF0000")("[ DOWN ] ❯ ") + chalk1.hex("#FF0000")(`${res.website} ${res.statusMessage}`))))
 monitor.on('stop', (website) => console.log(loadColor(chalk1.bold.hex("#FF0000")("[ STOP ] ❯ ") + chalk1.hex("#FF0000")(`${website}`))))
 monitor.on('error', (error) => console.log(chalk1.bold.hex("#FF0000")("[ ERROR ] ❯ ") + chalk1.hex("#FF0000")(`${error}`)))
 }*/
